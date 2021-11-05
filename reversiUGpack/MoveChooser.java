@@ -27,10 +27,9 @@ public class MoveChooser {
         for (Move i:moves) {
     		boardState1=boardState.deepCopy();
     		boardState1.makeLegalMove(i.x,i.y);
-    		if (minimax(boardState1,5,-9999,9999,false)>eval){
-    			System.out.println(minimax(boardState1,7,-9999,9999,false));
+    		if (minimax(boardState1,6,-9999,9999,false)>eval){
     			k=j;
-    			eval=minimax(boardState1,5,-9999,9999,false);
+    			eval=minimax(boardState1,6,-9999,9999,false);
     		}
     		j=j+1; 		
     	}
